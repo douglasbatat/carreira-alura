@@ -1,6 +1,5 @@
 package br.com.alura.screenmatch.service;
 
-import br.com.alura.screenmatch.model.DadosSerie;
 import tools.jackson.databind.ObjectMapper;
 
 public class ConverteDados implements IConverteDados{
@@ -8,7 +7,7 @@ public class ConverteDados implements IConverteDados{
 
 
     @Override
-    public <T> T obterdados(String json, Class<T> classe) {
+    public <T> T obterDados(String json, Class<T> classe) {
         return mapper.readValue(json, classe);
     }
 }
